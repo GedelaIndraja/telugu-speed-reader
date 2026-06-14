@@ -263,7 +263,7 @@ export default function Home() {
         .map((s) => s.trim())
         .filter((s) => s.length > 20);
 
-      const uniqueSentences = [...new Set(sentences)];
+      const uniqueSentences = Array.from(new Set(sentences));
 
       setText(uniqueSentences.join('। '));
 
